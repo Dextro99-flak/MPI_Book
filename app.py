@@ -113,3 +113,13 @@ def logout_app():
     m  = session["login"]+"Logged out successfully"
     return render_template("index.html",mes=m)
 
+
+@app.route('/new_book',methods=['GET','POST'])
+def book_add():
+    author = request.form.get('author')
+    isbn=request.form.get('isbn')
+    title=request.form.get('title')
+    year=request.form.get('year')
+    db.execute("INSERT INTO books (isbn, title, author, year) VALUES (:isb, :tit, :auth, :yr)",{ "isb":isbn, "tit":title, "auth":author , "yr":year})
+    db.commit()
+    return render_template("user_bookadd.html")
