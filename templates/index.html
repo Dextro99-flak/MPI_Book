@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> Login </title>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.login-page {
+  width: 360px;
+  padding: 4% 0 0;
+  margin: auto;
+  background-image: url('bkss.jpg') ;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.title {
+  text-transform: uppercase ;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #03fcf4;
+  font-size: 80px;
+  padding-top: 90px;
+  text-decoration: overline underline;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 21px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration-color: green;
+}
+#mes
+{
+  color : #ff8080 ;
+}
+</style>
+</head>
+<h1 class="title">Project1</h1>
+<body>
+<div class="login-page">
+  <div class="form">
+    <h3 id="mes"> <b> {{ mes }} </b></h3>
+    <form action="{{ url_for('login_app') }}" method="post" class="register-form">
+      <input type="text" name="uname" placeholder="Username"/>
+      <input type="password" name="pass" placeholder="Password"/>
+      <button>Login</button>
+	  <p class="message"><a href="register.html">Click to Register</a></p>
+</div>
+</body>
+</html>
