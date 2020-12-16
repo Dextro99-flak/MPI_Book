@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Add new Book Record</title>
+    </head>
+    <body>
+        <div class="input">
+            <form action="{{ url_for('book_add') }}" method="post" class="book-form">
+                <input type="text" name="title" placeholder="Title of the Book" class="info1">
+                <p>  </p>
+                <input type="text" name="isbn" placeholder="ISBN number of the Book" class="info1">
+                <p>  </p>
+                <input type="text" name="author" placeholder="Author of the Book" class="info1">
+                <p>  </p>
+                <input type="text" name="year" placeholder="Year of publication" class="info1">
+                <p>  </p>
+            </form>
+        </div>
+    </body>
+</html>
